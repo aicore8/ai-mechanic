@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/aifivem/ai-mechanic/compare/v0.2.4...v0.3.0) (2026-11-16)
+
+
+### New Features
+
+* **mechanic:** server-side repairs on FiveM Enhanced, part damage priced, one fix sender ([8089d24](https://github.com/aifivem/ai-mechanic/commit/8089d2431734a6ffe6814ee28331f69105265a14))
+
+
+### Bug Fixes
+
+* **mechanic:** shop repair price back to engine and body (the client shows the same sum) ([323aa83](https://github.com/aifivem/ai-mechanic/commit/323aa83470a63018e75da20d28ab5b093cb09860))
+
 ## [0.2.4](https://github.com/aifivem/ai-mechanic/compare/v0.2.3...v0.2.4) (2026-11-02)
 
 
