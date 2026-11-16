@@ -1,6 +1,7 @@
 import {
   aiLog,
   aiLogChannels,
+  enhanced,
   EntityState,
   notify,
   onClientCallback,
@@ -20,6 +21,7 @@ import { EVENTS } from "common/mechanic";
 import { applyChange, priceOf, toChange, type Change } from "common/tuning";
 import { canUse, content, ownedId, pay, payerOf, shopAt } from "./content";
 import { driven } from "./driven";
+import { fixOn } from "./fix";
 
 const propsState = new EntityState(
   VEHICLE_BAGS.props,
@@ -80,12 +82,8 @@ onClientCallback(
   },
 );
 
-/** Sends a fix to the vehicle's owner client (the only one that can change its health). */
-function fixOn(vehicle: number, engine: number | null): void {
-  const owner = NetworkGetEntityOwner(vehicle);
-  if (owner > 0)
-    emitNet(EVENTS.fix, owner, NetworkGetNetworkIdFromEntity(vehicle), engine);
-}
+/** Health points one damaged part adds to a shop repair's price (Enhanced, where the server reads the parts). */
+const PART_POINTS = 50;
 
 onClientCallback(
   EVENTS.repair,
@@ -96,9 +94,12 @@ onClientCallback(
     if (!canUse(source, shop)) return fail("MECH_ERR_JOB");
     const vehicle = driven(source, netId);
     if (!vehicle) return fail("MECH_ERR_DRIVER");
+    // Enhanced: smashed windows, burst tyres, broken lights... count as well (each like PART_POINTS of health).
+    const parts = enhanced.readVehicleDamage(vehicle);
     const damage =
       Math.max(0, 1000 - GetVehicleEngineHealth(vehicle)) +
-      Math.max(0, 1000 - GetVehicleBodyHealth(vehicle));
+      Math.max(0, 1000 - GetVehicleBodyHealth(vehicle)) +
+      (parts ? enhanced.countVehicleDamage(parts) * PART_POINTS : 0);
     if (damage < 1) return fail("MECH_ERR_NOT_DAMAGED");
     const price = Math.round(
       damage * content.settings.repairPoint * shop.multiplier,
@@ -115,6 +116,7 @@ onClientCallback(
       optionalExport("ai-vehicles")?.SaveVehicle(id, {
         engine: 1000,
         body: 1000,
+        damage: null,
       });
     notify(source, Locale("MECH_REPAIRED", price), "success");
     aiLog("repairs", "shop repair", {

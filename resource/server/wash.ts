@@ -1,13 +1,10 @@
-import {
-  coordsOf,
-  onClientCallback,
-  progressFor,
-} from "@aifivem/lib/server";
+import { coordsOf, onClientCallback, progressFor } from "@aifivem/lib/server";
 import { distance, fail, oneArg, readId } from "@aifivem/lib/shared";
 import { Locale } from "common";
 import { EVENTS } from "common/mechanic";
 import { content, pay } from "./content";
 import { driven } from "./driven";
+import { fixOn } from "./fix";
 
 /** The vehicle the player drives at a car wash, or a refusal. */
 function washable(source: number, netId: number): number | string {
@@ -39,9 +36,7 @@ onClientCallback(
     if (!pay(source, null, "player", washPrice, "carwash"))
       return fail("MECH_ERR_MONEY");
     SetVehicleDirtLevel(vehicle, 0);
-    const owner = NetworkGetEntityOwner(vehicle);
-    if (owner > 0)
-      emitNet(EVENTS.fix, owner, NetworkGetNetworkIdFromEntity(vehicle), -1);
+    fixOn(vehicle, -1);
     return { ok: true };
   },
 );

@@ -11,16 +11,12 @@ import {
   SourceLock,
   vehicleOf,
 } from "@aifivem/lib/server";
-import {
-  fail,
-  oneArg,
-  readText,
-  RecordObjects,
-} from "@aifivem/lib/shared";
+import { fail, oneArg, readText, RecordObjects } from "@aifivem/lib/shared";
 import { Locale } from "common";
 import { EVENTS } from "common/mechanic";
 import { readShop } from "common/shop";
 import { canUse, content, ownedId, panel } from "./content";
+import { fixOn } from "./fix";
 
 /**
  * Job shops' stashes: an edited shop registers only its own again, a stash size change all of them (ai-core keeps
@@ -68,9 +64,7 @@ async function repair(source: number, vehicle: number): Promise<void> {
     return;
   if (!inventory.removeItem(source, content.settings.kitItem, 1)) return;
   const engine = content.settings.kitEngine;
-  const owner = NetworkGetEntityOwner(vehicle);
-  if (owner > 0)
-    emitNet(EVENTS.fix, owner, NetworkGetNetworkIdFromEntity(vehicle), engine);
+  fixOn(vehicle, engine);
   const id = ownedId(vehicle);
   if (id !== null) optionalExport("ai-vehicles")?.SaveVehicle(id, { engine });
   notify(source, Locale("MECH_KIT_DONE"), "success");
