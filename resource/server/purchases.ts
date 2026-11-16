@@ -1,7 +1,6 @@
 import {
   aiLog,
   aiLogChannels,
-  enhanced,
   EntityState,
   notify,
   onClientCallback,
@@ -82,9 +81,6 @@ onClientCallback(
   },
 );
 
-/** Health points one damaged part adds to a shop repair's price (Enhanced, where the server reads the parts). */
-const PART_POINTS = 50;
-
 onClientCallback(
   EVENTS.repair,
   { args: oneArg(readId), lock: true },
@@ -94,12 +90,9 @@ onClientCallback(
     if (!canUse(source, shop)) return fail("MECH_ERR_JOB");
     const vehicle = driven(source, netId);
     if (!vehicle) return fail("MECH_ERR_DRIVER");
-    // Enhanced: smashed windows, burst tyres, broken lights... count as well (each like PART_POINTS of health).
-    const parts = enhanced.readVehicleDamage(vehicle);
     const damage =
       Math.max(0, 1000 - GetVehicleEngineHealth(vehicle)) +
-      Math.max(0, 1000 - GetVehicleBodyHealth(vehicle)) +
-      (parts ? enhanced.countVehicleDamage(parts) * PART_POINTS : 0);
+      Math.max(0, 1000 - GetVehicleBodyHealth(vehicle));
     if (damage < 1) return fail("MECH_ERR_NOT_DAMAGED");
     const price = Math.round(
       damage * content.settings.repairPoint * shop.multiplier,
