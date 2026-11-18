@@ -1,64 +1,64 @@
 # Changelog
 
-## [0.3.0](https://github.com/aifivem/ai-mechanic/compare/v0.2.4...v0.3.0) (2026-11-16)
+## [0.3.0](https://github.com/aicore8/ai-mechanic/compare/v0.2.4...v0.3.0) (2026-11-16)
 
 
 ### New Features
 
-* **mechanic:** server-side repairs on FiveM Enhanced, part damage priced, one fix sender ([8089d24](https://github.com/aifivem/ai-mechanic/commit/8089d2431734a6ffe6814ee28331f69105265a14))
+* **mechanic:** server-side repairs on FiveM Enhanced, part damage priced, one fix sender ([8089d24](https://github.com/aicore8/ai-mechanic/commit/8089d2431734a6ffe6814ee28331f69105265a14))
 
 
 ### Bug Fixes
 
-* **mechanic:** shop repair price back to engine and body (the client shows the same sum) ([323aa83](https://github.com/aifivem/ai-mechanic/commit/323aa83470a63018e75da20d28ab5b093cb09860))
+* **mechanic:** shop repair price back to engine and body (the client shows the same sum) ([323aa83](https://github.com/aicore8/ai-mechanic/commit/323aa83470a63018e75da20d28ab5b093cb09860))
 
-## [0.2.4](https://github.com/aifivem/ai-mechanic/compare/v0.2.3...v0.2.4) (2026-11-02)
+## [0.2.4](https://github.com/aicore8/ai-mechanic/compare/v0.2.3...v0.2.4) (2026-11-02)
 
 
 ### Documentation
 
-* install from the release zip ([4988bc7](https://github.com/aifivem/ai-mechanic/commit/4988bc7dbe48eac94ed55b9f393b55a905bb9420))
+* install from the release zip ([4988bc7](https://github.com/aicore8/ai-mechanic/commit/4988bc7dbe48eac94ed55b9f393b55a905bb9420))
 
 
 ### Miscellaneous Chores
 
-* build files are no longer in git, the release zip carries them ([212ad30](https://github.com/aifivem/ai-mechanic/commit/212ad3023e48dd982b6173f54f713dbb9c41a57e))
+* build files are no longer in git, the release zip carries them ([212ad30](https://github.com/aicore8/ai-mechanic/commit/212ad3023e48dd982b6173f54f713dbb9c41a57e))
 
-## [0.2.3](https://github.com/aifivem/ai-mechanic/compare/v0.2.2...v0.2.3) (2026-11-02)
-
-
-### Code Refactoring
-
-* import the shared packages from [@aifivem](https://github.com/aifivem) ([db92f5b](https://github.com/aifivem/ai-mechanic/commit/db92f5b84108aab2d7cf6d63a300a18c8fa6a56b))
-
-## [0.2.2](https://github.com/aifivem/ai-mechanic/compare/v0.2.1...v0.2.2) (2026-11-01)
+## [0.2.3](https://github.com/aicore8/ai-mechanic/compare/v0.2.2...v0.2.3) (2026-11-02)
 
 
 ### Code Refactoring
 
-* feature folders, side entries that only import, panel schema per tab ([ed434f5](https://github.com/aifivem/ai-mechanic/commit/ed434f542fe7ba59169012f54c4286506b238952))
+* import the shared packages from [@aicore8](https://github.com/aicore8) ([db92f5b](https://github.com/aicore8/ai-mechanic/commit/db92f5b84108aab2d7cf6d63a300a18c8fa6a56b))
 
-## [0.2.1](https://github.com/aifivem/ai-mechanic/compare/v0.2.0...v0.2.1) (2026-10-31)
+## [0.2.2](https://github.com/aicore8/ai-mechanic/compare/v0.2.1...v0.2.2) (2026-11-01)
+
+
+### Code Refactoring
+
+* feature folders, side entries that only import, panel schema per tab ([ed434f5](https://github.com/aicore8/ai-mechanic/commit/ed434f542fe7ba59169012f54c4286506b238952))
+
+## [0.2.1](https://github.com/aicore8/ai-mechanic/compare/v0.2.0...v0.2.1) (2026-10-31)
 
 
 ### Miscellaneous Chores
 
-* rebuild with the current lib ([8422fcf](https://github.com/aifivem/ai-mechanic/commit/8422fcfcd39dc447439cad5a356dda0d283bf133))
+* rebuild with the current lib ([8422fcf](https://github.com/aicore8/ai-mechanic/commit/8422fcfcd39dc447439cad5a356dda0d283bf133))
 
-## [0.2.0](https://github.com/aifivem/ai-mechanic/compare/v0.1.0...v0.2.0) (2026-10-31)
+## [0.2.0](https://github.com/aicore8/ai-mechanic/compare/v0.1.0...v0.2.0) (2026-10-31)
 
 
 ### New Features
 
-* mechanics bill customers from the radial menu ([3bc4b80](https://github.com/aifivem/ai-mechanic/commit/3bc4b809a590c580ded089bed07d74e841ca67c6))
+* mechanics bill customers from the radial menu ([3bc4b80](https://github.com/aicore8/ai-mechanic/commit/3bc4b809a590c580ded089bed07d74e841ca67c6))
 
 
 ### Miscellaneous Chores
 
-* rebuild with the current lib ([0422a0e](https://github.com/aifivem/ai-mechanic/commit/0422a0e612ac51fb404128249802eee8bb2c0b9d))
-* rebuild with the current lib ([f552b37](https://github.com/aifivem/ai-mechanic/commit/f552b37df404fdfda432bee55d7170e3472e4d42))
-* rebuild with the current lib ([508315f](https://github.com/aifivem/ai-mechanic/commit/508315f6a969097238fa41f01ca49b31a4b03261))
-* rebuild with the current lib ([692e10d](https://github.com/aifivem/ai-mechanic/commit/692e10de65284d9a6882454c745c747016b52f58))
-* rebuild with the current lib ([ee7bde3](https://github.com/aifivem/ai-mechanic/commit/ee7bde3388334c520f5ceca7bdba181f62a7ca5f))
-* rebuild with the current lib ([8384925](https://github.com/aifivem/ai-mechanic/commit/8384925a45134aad73d03840598a9246bdedde7b))
-* regenerate settings schema ([fc82c18](https://github.com/aifivem/ai-mechanic/commit/fc82c182bb5fa2bf829dafea575e3281c6d685c9))
+* rebuild with the current lib ([0422a0e](https://github.com/aicore8/ai-mechanic/commit/0422a0e612ac51fb404128249802eee8bb2c0b9d))
+* rebuild with the current lib ([f552b37](https://github.com/aicore8/ai-mechanic/commit/f552b37df404fdfda432bee55d7170e3472e4d42))
+* rebuild with the current lib ([508315f](https://github.com/aicore8/ai-mechanic/commit/508315f6a969097238fa41f01ca49b31a4b03261))
+* rebuild with the current lib ([692e10d](https://github.com/aicore8/ai-mechanic/commit/692e10de65284d9a6882454c745c747016b52f58))
+* rebuild with the current lib ([ee7bde3](https://github.com/aicore8/ai-mechanic/commit/ee7bde3388334c520f5ceca7bdba181f62a7ca5f))
+* rebuild with the current lib ([8384925](https://github.com/aicore8/ai-mechanic/commit/8384925a45134aad73d03840598a9246bdedde7b))
+* regenerate settings schema ([fc82c18](https://github.com/aicore8/ai-mechanic/commit/fc82c182bb5fa2bf829dafea575e3281c6d685c9))

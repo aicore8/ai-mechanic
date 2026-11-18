@@ -3,9 +3,9 @@ import {
   getVehicleProps,
   menu,
   setVehicleProps,
-} from "@aifivem/lib/client";
-import type { VehicleProps } from "@aifivem/lib/shared";
-import type { MenuItem } from "@aifivem/shared";
+} from "@aicore8/lib/client";
+import type { VehicleProps } from "@aicore8/lib/shared";
+import type { MenuItem } from "@aicore8/shared";
 import { Locale } from "common";
 import { EVENTS } from "common/mechanic";
 import type { Settings } from "common/settings";

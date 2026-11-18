@@ -1,4 +1,4 @@
-import { loadLocaleTexts } from "@aifivem/lib/client";
+import { loadLocaleTexts } from "@aicore8/lib/client";
 
 const texts = loadLocaleTexts();
 /** A lang text by a built key (mod slots, wheel types, paints), or the fallback when the lang file has none. */

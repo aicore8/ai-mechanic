@@ -1,5 +1,5 @@
-import { entityFromNetId, onServerEvent } from "@aifivem/lib/client";
-import { readFinite, readId } from "@aifivem/lib/shared";
+import { entityFromNetId, onServerEvent } from "@aicore8/lib/client";
+import { readFinite, readId } from "@aicore8/lib/shared";
 import { EVENTS } from "common/mechanic";
 
 /** The vehicle's owner applies what only it can change: health, deformation, dirt. */

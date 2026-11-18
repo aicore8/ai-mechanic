@@ -1,4 +1,4 @@
-import type { PanelSchema } from "@aifivem/shared";
+import type { PanelSchema } from "@aicore8/shared";
 import { shopsFile, shopsTab } from "./shops";
 import { washesFile, washesTab } from "./washes";
 import { settingsFile, settingsTab } from "./settings";

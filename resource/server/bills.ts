@@ -7,8 +7,8 @@ import {
   isNear,
   onClientCallback,
   online,
-} from "@aifivem/lib/server";
-import { fail, readId, readInt, readText } from "@aifivem/lib/shared";
+} from "@aicore8/lib/server";
+import { fail, readId, readInt, readText } from "@aicore8/lib/shared";
 import { BILL_METRES, BILL_REASON_MAX, EVENTS } from "common/mechanic";
 import { mechanicJobs } from "common/shop";
 import { content } from "./content";

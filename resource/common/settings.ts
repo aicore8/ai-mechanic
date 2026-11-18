@@ -1,4 +1,4 @@
-import { int, num, readBlipStyle, record, str } from "@aifivem/lib/shared";
+import { int, num, readBlipStyle, record, str } from "@aicore8/lib/shared";
 
 /** ai-mechanic's settings file (both sides). */
 export interface Settings {

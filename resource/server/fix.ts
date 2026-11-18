@@ -1,4 +1,4 @@
-import { enhanced } from "@aifivem/lib/server";
+import { enhanced } from "@aicore8/lib/server";
 import { EVENTS } from "common/mechanic";
 
 /**
