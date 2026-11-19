@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/aicore8/ai-mechanic/compare/v0.3.0...v0.3.1) (2026-11-18)
+
+
+### Miscellaneous Chores
+
+* rename aifivem to aicore8 (aicore8.com, github.com/aicore8, [@aicore8](https://github.com/aicore8) npm scope) ([ebc90f5](https://github.com/aicore8/ai-mechanic/commit/ebc90f555f11d110ba5b0c4b1fb6bbfa5feb1f5e))
+
 ## [0.3.0](https://github.com/aicore8/ai-mechanic/compare/v0.2.4...v0.3.0) (2026-11-16)
 
 
